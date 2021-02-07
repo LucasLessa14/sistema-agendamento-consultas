@@ -1,0 +1,25 @@
+{
+  "name": "sistema-agendamento-consultas",
+  "version": "1.0.0",
+  "description": "Sistema de agendamento de consultas usando MongoDB e Express. Esse projeto é uma adaptação de um dos projetos da Formação NodeJS do guia do programador.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasLessa14/sistema-agendamento-consultas.git"
+  },
+  "author": "Lucas Lessa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasLessa14/sistema-agendamento-consultas/issues"
+  },
+  "homepage": "https://github.com/LucasLessa14/sistema-agendamento-consultas#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.15"
+  }
+}
