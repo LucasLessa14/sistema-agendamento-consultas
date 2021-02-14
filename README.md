@@ -1,5 +1,5 @@
-# sistema-agendamento-consultas
-Sistema de agendamento de consultas usando MongoDB e Express.
+# Sistema de agendamento de consultas
+Sistema de agendamento de consultas usando MongoDB e Express.  
 Esse projeto é uma adaptação de um dos projetos da Formação NodeJS.
 
 ## Tecnologias usadas
@@ -8,6 +8,13 @@ Esse projeto é uma adaptação de um dos projetos da Formação NodeJS.
 - MongoDB/Mongoose
 - FullCalendar
 - EJS
+
+## Docker
+```
+docker run --name mongodb-app -p 27017:27017 -d mongo:4.4.3
+
+docker exec -it 03e6adf29b74 bash
+```
 
 ## Referências
 - https://www.udemy.com/course/formacao-nodejs/
