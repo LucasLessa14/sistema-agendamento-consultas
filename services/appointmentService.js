@@ -19,7 +19,7 @@ class AppointmentService {
         }
     }
 
-    async GetAll(showFinished) {
+    async getAll(showFinished) {
         if (showFinished) {
             return await Appo.find();
         } else {
@@ -32,6 +32,15 @@ class AppointmentService {
             });
 
             return appointments;
+        }
+    }
+
+    async getById(id) {
+        try {
+            var event = await Appo.findOne({ '_id': id });
+            return event;
+        } catch (err) {
+            console.log(err);
         }
     }
 }

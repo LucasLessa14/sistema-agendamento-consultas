@@ -19,7 +19,10 @@
             locale: 'pt-br',
             events: 'getcalendar',
             eventClick: function(info) {
-                console.log(info.event);
+                // console.log(info.event.id);
+                // console.log(info.event.title);
+            
+                window.location.href = '/event/' + info.event.id;
             }
         });
 

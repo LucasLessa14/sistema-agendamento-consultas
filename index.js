@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 const AppointmentService = require('./services/appointmentService');
-const appointmentService = require('./services/appointmentService');
 
 app.use(express.static('public'));
 
@@ -39,11 +38,17 @@ app.post('/create', async (req, res) => {
 });
 
 app.get('/getcalendar', async (req, res) => {
-    var appointments = await appointmentService.GetAll(false);
+    var appointments = await AppointmentService.getAll(false);
 
     res.json(appointments);
-})
+});
+
+app.get("/event/:id", async (req, res) => {
+    var appointment = await AppointmentService.getById(req.params.id);
+    console.log(appointment);
+    res.render("event", { appo: appointment });
+});
 
 app.listen(8409, () => {
     console.log('Servidor rodando na porta 8409');
-})
+});
