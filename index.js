@@ -56,6 +56,18 @@ app.post('/finish', async (req, res) => {
     res.redirect('/');
 });
 
+app.get('/list', async (req, res) => {
+
+    // await AppointmentService.search();
+    var appos = await AppointmentService.getAll(true);
+    res.render("list", { appos });
+});
+
+app.get('/serchresult', async (req, res) => {
+    var appos = await AppointmentService.search(req.query.search);
+    res.render("list", { appos });
+})
+
 app.listen(8409, () => {
     console.log('Servidor rodando na porta 8409');
 });
